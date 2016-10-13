@@ -1,0 +1,20 @@
+diff --git a/test/tests/api/v1_1/redfish_endpoint_tests.py b/test/tests/api/v1_1/redfish_endpoint_tests.py
+index 0fcdb31..189c867 100644
+--- a/test/tests/api/v1_1/redfish_endpoint_tests.py
++++ b/test/tests/api/v1_1/redfish_endpoint_tests.py
+@@ -221,6 +221,8 @@ class RedfishEndpointTests(object):
+         depends_on_groups=['redfish-discovery.v1.1.test'])    
+     def redfish_emc_catalogs_test(self):
+         """ Testing EMC Redfish Service Catalog """
++        import time
++        time.sleep(5)
+         for node in self.__nodes:
+             id = node.get('id')
+             assert_is_not_none(id)
+@@ -336,4 +338,4 @@ class RedfishEndpointTests(object):
+                     fail('failure deleting composed system')
+ 
+ 
+-        
+\ No newline at end of file
++        
